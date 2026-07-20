@@ -1,0 +1,42 @@
+[
+  {
+    "headline": "Estimates hold under 8 hours and collapse above it",
+    "body": "Tasks estimated at 2-8h land within 12.5% of plan, but 8-16h tasks slip 43% and 16h+ tasks slip 56.4%. The 54 tasks estimated above 8h account for 593.5 of the 722.2 total overrun hours. The problem isn't estimating badly, it's estimating big.",
+    "metric": "+56.4%",
+    "metric_label": "median slip on 16h+ tasks",
+    "severity": "critical",
+    "action": "Refuse any estimate above 8h at planning and split it until every piece fits under that line."
+  },
+  {
+    "headline": "One assignee's estimates are off by a consistent multiple",
+    "body": "priya.n's 32 tasks were estimated at 253.5h and took 522h, a median slip of 79.2% and 268.5 overrun hours on their own. The consistency matters more than the size: a stable 1.8x gap is a calibration problem with a mechanical fix, not a performance problem.",
+    "metric": "268.5h",
+    "metric_label": "overrun from one assignee",
+    "severity": "critical",
+    "action": "Re-estimate priya.n's open tasks with a peer before the next sprint commits to them."
+  },
+  {
+    "headline": "Blocked work is holding a quarter of all open hours",
+    "body": "Nine blocked tasks have already absorbed 242.5h, which is 26.3% of the 921h sunk into work that hasn't shipped. Blocked tasks also carry the worst median slip of any status at 85%, because the clock keeps running while nothing moves.",
+    "metric": "242.5h",
+    "metric_label": "sunk into 9 blocked tasks",
+    "severity": "warning",
+    "action": "Name an owner for each of the nine blockers this week, or close the tasks and stop counting the hours."
+  },
+  {
+    "headline": "Fourteen tasks caused half of the overrun",
+    "body": "Half of the 722.2 overrun hours come from just 14 of 160 tasks, and 79.6% comes from the worst 32. The median task only slips 20%, so broad process changes would be aimed at tasks that are basically fine.",
+    "metric": "14 of 160",
+    "metric_label": "tasks behind half the overrun",
+    "severity": "warning",
+    "action": "Review the top variance tasks weekly as exceptions instead of tightening estimation across the board."
+  },
+  {
+    "headline": "One person's estimates are padded, not accurate",
+    "body": "marco.r finishes at a median of 8.3% under estimate while every other assignee runs 6% to 79% over. That looks like the best record on the team, but it reads as buffer built into the estimate rather than unusual delivery speed, and it quietly inflates any plan built from those numbers.",
+    "metric": "-8.3%",
+    "metric_label": "median slip, only negative one",
+    "severity": "watch",
+    "action": "Plan marco.r's capacity from actual hours rather than estimated hours until the two converge."
+  }
+]

@@ -1,0 +1,161 @@
+task_id,assignee,estimated_hours,actual_hours,status
+PYN-1001,dee.okafor,4,3.25,Done
+PYN-1002,sam.liang,3,3.5,In Review
+PYN-1003,yuki.t,3,3.5,Done
+PYN-1004,ana.silva,24,30.0,Done
+PYN-1005,sam.liang,2,2.0,Done
+PYN-1006,sam.liang,20,21.5,Done
+PYN-1007,marco.r,12,12.0,In Review
+PYN-1008,sam.liang,4,3.75,In Progress
+PYN-1009,priya.n,1,1.25,In Progress
+PYN-1010,sam.liang,32,50.75,Done
+PYN-1011,ana.silva,1,1.25,In Progress
+PYN-1012,sam.liang,12,17.25,Done
+PYN-1013,dee.okafor,3,2.0,In Review
+PYN-1014,priya.n,8,36.75,In Progress
+PYN-1015,ana.silva,12,14.5,Done
+PYN-1016,yuki.t,6,6.25,Done
+PYN-1017,sam.liang,2,2.25,In Review
+PYN-1018,priya.n,4,5.75,Done
+PYN-1019,yuki.t,8,11.75,Done
+PYN-1020,priya.n,12,24.25,Done
+PYN-1021,sam.liang,3,3.5,In Review
+PYN-1022,sam.liang,12,18.5,Done
+PYN-1023,ana.silva,0.5,0.5,Done
+PYN-1024,dee.okafor,1,1.0,In Review
+PYN-1025,sam.liang,0.5,0.75,Done
+PYN-1026,marco.r,3,1.5,Done
+PYN-1027,yuki.t,8,6.75,Done
+PYN-1028,sam.liang,10,12.0,Done
+PYN-1029,priya.n,0.5,1.0,In Progress
+PYN-1030,yuki.t,8,10.5,In Progress
+PYN-1031,dee.okafor,24,33.25,In Review
+PYN-1032,yuki.t,4,4.75,Done
+PYN-1033,ana.silva,1.5,1.0,Done
+PYN-1034,yuki.t,12,15.75,Done
+PYN-1035,marco.r,1,1.0,In Progress
+PYN-1036,yuki.t,8,10.5,Done
+PYN-1037,priya.n,3,3.25,Done
+PYN-1038,dee.okafor,0.5,0.5,In Progress
+PYN-1039,yuki.t,5,7.75,Done
+PYN-1040,priya.n,24,70.25,Blocked
+PYN-1041,sam.liang,12,12.25,Done
+PYN-1042,ana.silva,8,17.5,Done
+PYN-1043,marco.r,5,5.25,In Progress
+PYN-1044,ana.silva,0.5,0.25,Done
+PYN-1045,yuki.t,2,3.0,Done
+PYN-1046,priya.n,5,6.75,In Progress
+PYN-1047,priya.n,0.5,1.0,In Review
+PYN-1048,ana.silva,24,43.0,Done
+PYN-1049,dee.okafor,16,22.5,In Progress
+PYN-1050,priya.n,5,9.25,Blocked
+PYN-1051,yuki.t,40,68.25,Done
+PYN-1052,dee.okafor,6,4.0,Done
+PYN-1053,ana.silva,1,0.75,In Progress
+PYN-1054,yuki.t,1,1.75,Done
+PYN-1055,sam.liang,5,5.75,Blocked
+PYN-1056,marco.r,1,1.0,In Progress
+PYN-1057,yuki.t,40,64.25,Done
+PYN-1058,priya.n,4,4.0,In Progress
+PYN-1059,marco.r,0.5,0.25,In Review
+PYN-1060,priya.n,12,29.75,In Progress
+PYN-1061,ana.silva,5,4.5,Done
+PYN-1062,yuki.t,1,1.25,In Progress
+PYN-1063,sam.liang,16,24.5,Done
+PYN-1064,ana.silva,6,4.5,In Progress
+PYN-1065,dee.okafor,1,0.75,Done
+PYN-1066,sam.liang,5,4.75,Done
+PYN-1067,dee.okafor,16,18.25,Done
+PYN-1068,yuki.t,20,25.0,Done
+PYN-1069,ana.silva,1.5,1.75,Done
+PYN-1070,sam.liang,0.5,0.5,Done
+PYN-1071,priya.n,10,20.75,Blocked
+PYN-1072,sam.liang,1.5,1.75,In Progress
+PYN-1073,marco.r,0.5,0.25,Done
+PYN-1074,priya.n,3,4.0,Done
+PYN-1075,sam.liang,2,2.0,Done
+PYN-1076,yuki.t,16,20.5,Blocked
+PYN-1077,yuki.t,5,3.25,Done
+PYN-1078,marco.r,4,2.25,Done
+PYN-1079,priya.n,6,3.0,In Progress
+PYN-1080,yuki.t,5,6.0,Done
+PYN-1081,sam.liang,0.5,0.75,Done
+PYN-1082,yuki.t,16,11.5,In Progress
+PYN-1083,sam.liang,1,0.5,In Progress
+PYN-1084,sam.liang,1.5,1.5,Done
+PYN-1085,dee.okafor,2,2.25,Done
+PYN-1086,dee.okafor,32,47.5,Done
+PYN-1087,ana.silva,3,2.25,In Review
+PYN-1088,yuki.t,1,1.0,Done
+PYN-1089,sam.liang,12,20.0,Done
+PYN-1090,ana.silva,3,2.5,Done
+PYN-1091,dee.okafor,1,0.5,Done
+PYN-1092,ana.silva,20,21.0,Done
+PYN-1093,priya.n,6,9.0,Done
+PYN-1094,marco.r,3,2.75,In Progress
+PYN-1095,priya.n,8,11.75,Done
+PYN-1096,yuki.t,0.5,0.5,Done
+PYN-1097,marco.r,24,40.75,In Review
+PYN-1098,yuki.t,8,9.0,Done
+PYN-1099,priya.n,2,4.75,Done
+PYN-1100,priya.n,0.5,0.75,Done
+PYN-1101,sam.liang,24,54.25,In Review
+PYN-1102,priya.n,8,8.5,Done
+PYN-1103,priya.n,16,62.75,Blocked
+PYN-1104,priya.n,16,30.25,Done
+PYN-1105,sam.liang,4,4.0,In Progress
+PYN-1106,priya.n,2,3.75,In Review
+PYN-1107,ana.silva,5,6.0,In Progress
+PYN-1108,ana.silva,3,3.25,In Progress
+PYN-1109,ana.silva,40,43.75,Done
+PYN-1110,yuki.t,16,25.5,In Review
+PYN-1111,yuki.t,4,5.0,In Review
+PYN-1112,dee.okafor,0.5,0.5,Done
+PYN-1113,dee.okafor,6,8.5,In Progress
+PYN-1114,yuki.t,5,6.5,Blocked
+PYN-1115,yuki.t,8,8.75,In Progress
+PYN-1116,ana.silva,3,3.25,Done
+PYN-1117,yuki.t,3,5.0,Done
+PYN-1118,marco.r,10,6.75,Done
+PYN-1119,ana.silva,40,49.75,Done
+PYN-1120,dee.okafor,16,28.75,In Review
+PYN-1121,yuki.t,3,6.0,Done
+PYN-1122,yuki.t,10,13.0,In Progress
+PYN-1123,marco.r,10,6.25,In Progress
+PYN-1124,marco.r,16,21.5,Done
+PYN-1125,yuki.t,2,2.25,In Review
+PYN-1126,priya.n,10,23.0,Done
+PYN-1127,priya.n,12,21.0,In Progress
+PYN-1128,marco.r,8,6.25,Done
+PYN-1129,priya.n,40,73.5,In Review
+PYN-1130,priya.n,1.5,2.75,Done
+PYN-1131,yuki.t,40,72.5,In Progress
+PYN-1132,dee.okafor,10,18.75,Done
+PYN-1133,sam.liang,2,4.75,Done
+PYN-1134,priya.n,6,10.25,In Review
+PYN-1135,marco.r,6,7.25,In Review
+PYN-1136,yuki.t,10,24.25,Done
+PYN-1137,sam.liang,16,17.0,Done
+PYN-1138,ana.silva,4,4.0,Done
+PYN-1139,ana.silva,2,2.25,In Progress
+PYN-1140,priya.n,1.5,3.0,In Progress
+PYN-1141,priya.n,5,7.0,In Progress
+PYN-1142,dee.okafor,4,3.0,Done
+PYN-1143,priya.n,1,1.25,In Progress
+PYN-1144,marco.r,40,45.25,Done
+PYN-1145,marco.r,8,6.75,Done
+PYN-1146,sam.liang,6,9.25,Done
+PYN-1147,ana.silva,24,37.0,Done
+PYN-1148,ana.silva,2,2.25,Done
+PYN-1149,dee.okafor,16,22.75,Blocked
+PYN-1150,yuki.t,24,41.75,Done
+PYN-1151,marco.r,8,9.0,In Review
+PYN-1152,marco.r,12,8.25,In Review
+PYN-1153,sam.liang,8,7.5,In Progress
+PYN-1154,yuki.t,2,2.0,Done
+PYN-1155,ana.silva,24,38.5,Done
+PYN-1156,priya.n,20,27.75,In Progress
+PYN-1157,yuki.t,4,5.75,In Progress
+PYN-1158,sam.liang,1,0.75,Done
+PYN-1159,sam.liang,10,24.0,Blocked
+PYN-1160,ana.silva,1,1.0,Done
