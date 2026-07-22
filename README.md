@@ -1,7 +1,7 @@
 # Pyngyn — AI Delivery Insights (Streamlit)
 
 A task time-tracking analytics app. Upload a CSV, it finds the delivery
-bottlenecks with pandas, has Claude turn the numbers into plain-English findings,
+bottlenecks with pandas, has Gemini turn the numbers into plain-English findings,
 and shows them with an interactive slip rail and a parity scatter.
 
 Everything is Python — no HTML file to maintain.
@@ -22,20 +22,20 @@ Your CSV needs five columns: `task_id, assignee, estimated_hours, actual_hours, 
 ### Live insights (optional)
 
 Without a key the app runs on a bundled cached insight set, so it works out of the
-box. To have Claude write insights from your actual data, provide a key one of two ways:
+box. To have Gemini write insights from your actual data, provide a key one of two ways:
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...
+export GEMINI_API_KEY=...
 streamlit run app.py
 ```
 
 or create `.streamlit/secrets.toml` (gitignored):
 
 ```toml
-ANTHROPIC_API_KEY = "sk-ant-..."
+GEMINI_API_KEY = "..."
 ```
 
-The caption under the header shows which mode is active (`live: claude-sonnet-5`
+The caption under the header shows which mode is active (`live: gemini-2.5-flash`
 or `cached`). If a live call ever fails, it falls back to cached rather than
 breaking the page.
 
@@ -44,14 +44,14 @@ breaking the page.
 ```
 app.py                 the Streamlit app — layout, charts, controls
 analysis.py            the pandas bottleneck analysis (returns a stats dict)
-insights.py            Claude call + cached fallback
+insights.py            Gemini call + cached fallback
 sample_tasks.csv       160-task demo dataset
 insights_cached.json   insight set used when no key is set
-requirements.txt       streamlit, pandas, plotly, anthropic
+requirements.txt       streamlit, pandas, plotly, google-genai
 .streamlit/config.toml theme
 ```
 
-**Python computes the numbers; Claude writes the English.** Only the aggregates
+**Python computes the numbers; Gemini writes the English.** Only the aggregates
 go to the model, never the raw rows, so the numbers stay authoritative. The
 headline is the model's own most-severe finding.
 
@@ -64,14 +64,14 @@ Cloudflare Pages. The free, GitHub-native home for it is **Streamlit Community C
 2. Go to **share.streamlit.io** and sign in with GitHub.
 3. **Create app** → pick your repo, branch `main`, main file `app.py` → **Deploy**.
 4. For live insights: in the app's **Settings → Secrets**, paste
-   `ANTHROPIC_API_KEY = "sk-ant-..."` and save. The app restarts with it.
+   `GEMINI_API_KEY = "..."` and save. The app restarts with it.
 
 You get a public `https://<your-app>.streamlit.app` URL, and every push to `main`
 redeploys automatically.
 
 > Other one-click options that also deploy Python servers from GitHub: Hugging Face
 > Spaces (pick the Streamlit SDK), Render, or Railway. Same idea — connect the repo,
-> set the `ANTHROPIC_API_KEY` secret, done.
+> set the `GEMINI_API_KEY` secret, done.
 
 ## Testing
 

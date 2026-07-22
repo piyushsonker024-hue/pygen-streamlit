@@ -76,7 +76,13 @@ with right:
     if c1.button("Use sample data", width="stretch"):
         load_sample()
         st.rerun()
-    regen_clicked = c2.button("Regenerate insights", type="primary", width="stretch")
+    has_key = insights_mod.has_key()
+    regen_clicked = c2.button(
+        "Regenerate insights", type="primary", width="stretch",
+        disabled=not has_key,
+        help=None if has_key else
+             "Set GEMINI_API_KEY (env var or .streamlit/secrets.toml) to enable live regeneration.",
+    )
 
 up = st.file_uploader("Upload a task CSV", type="csv", label_visibility="collapsed")
 if up is not None:
@@ -227,5 +233,5 @@ worst = stats["worst_tasks"].rename(columns={
 })
 st.dataframe(worst, hide_index=True, width="stretch")
 
-st.caption("Numbers computed in Python (pandas); insights written by Claude. "
+st.caption("Numbers computed in Python (pandas); insights written by Gemini. "
            "The headline is the model's own top finding.")

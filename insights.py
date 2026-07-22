@@ -1,12 +1,3 @@
-"""
-insights.py — turn the stats into plain-English findings.
-
-Calls Claude if a key is available (env var or Streamlit secret), otherwise
-returns the bundled cached set so the app always works. Only the aggregates go
-to the model, never the raw task rows: the numbers stay authoritative and the
-model just writes about them.
-"""
-
 import json
 import os
 from pathlib import Path
@@ -15,7 +6,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
 CACHE = ROOT / "insights_cached.json"
-DEFAULT_MODEL = "claude-sonnet-5"
+DEFAULT_MODEL = "gemini-2.5-flash"
 
 SYSTEM = """You are an analyst embedded in a delivery team. You are given \
 pre-computed statistics from a task-level time tracking dataset. Your job is to \
@@ -47,12 +38,12 @@ REQUIRED = {"headline", "body", "metric", "metric_label", "severity", "action"}
 
 def _get_key():
     """Look in the environment first, then Streamlit secrets if available."""
-    key = os.environ.get("ANTHROPIC_API_KEY")
+    key = os.environ.get("GEMINI_API_KEY")
     if key:
         return key
     try:
         import streamlit as st
-        return st.secrets.get("ANTHROPIC_API_KEY")
+        return st.secrets.get("GEMINI_API_KEY")
     except Exception:
         return None
 
@@ -85,6 +76,10 @@ def _parse(text: str):
     return insights[:5]
 
 
+def has_key() -> bool:
+    return _get_key() is not None
+
+
 def cached():
     return json.loads(CACHE.read_text())
 
@@ -99,23 +94,19 @@ def generate(stats: dict, model: str = DEFAULT_MODEL):
         return cached(), "cached (no API key set)"
 
     try:
-        import anthropic
-        client = anthropic.Anthropic(api_key=key)
-        msg = client.messages.create(
+        from google import genai
+        from google.genai import types
+        client = genai.Client(api_key=key)
+        resp = client.models.generate_content(
             model=model,
-            max_tokens=2000,
-            system=SYSTEM,
-            messages=[{
-                "role": "user",
-                "content": (
-                    "Task time tracking statistics for the current period.\n"
-                    "Slip percentages are (actual / estimated - 1) * 100. Positive means over estimate.\n"
-                    "'on_target' means within +/-10% of estimate.\n\n"
-                    f"{json.dumps(_stats_for_prompt(stats), indent=2)}\n\nWrite the insights."
-                ),
-            }],
+            contents=(
+                "Task time tracking statistics for the current period.\n"
+                "Slip percentages are (actual / estimated - 1) * 100. Positive means over estimate.\n"
+                "'on_target' means within +/-10% of estimate.\n\n"
+                f"{json.dumps(_stats_for_prompt(stats), indent=2)}\n\nWrite the insights."
+            ),
+            config=types.GenerateContentConfig(system_instruction=SYSTEM, max_output_tokens=2000),
         )
-        text = "".join(b.text for b in msg.content if b.type == "text")
-        return _parse(text), f"live: {model}"
+        return _parse(resp.text), f"live: {model}"
     except Exception as e:
         return cached(), f"cached (live call failed: {type(e).__name__})"

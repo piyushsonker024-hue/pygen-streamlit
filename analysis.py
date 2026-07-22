@@ -1,13 +1,3 @@
-"""
-analysis.py — find the bottlenecks.
-
-The pandas logic from the original pipeline, as one function that takes a
-DataFrame and returns a plain dict of stats. Same numbers as before; no files.
-
-A bottleneck is only visible against a baseline, so everything here is a
-comparison — slip by assignee, by status, by task size — not just a total.
-"""
-
 import pandas as pd
 
 ON_TARGET_BAND = 0.10  # within +/-10% of estimate counts as "on target"
